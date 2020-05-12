@@ -16,7 +16,13 @@ io.on('connection', function(socket) {
     socket.on('banid', function(data) {
         io.emit('bid', data)
     });
-    socket.on('playerchange', function(data) {
+    socket.on('changeplayer', function(data) {
         io.emit('player', data)
+    });
+    socket.on('nbturn', function(data) {
+        io.emit('turn', data)
+    });
+    socket.on('timer', function(data) {
+        io.emit('time', data)
     });
 });
